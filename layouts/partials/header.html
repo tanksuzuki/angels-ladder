@@ -24,26 +24,6 @@
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/highlight_monokai.css">
 
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-
-
-  <!-- Script
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script type="text/javascript">
-    function converter(M){
-      var str="", str_as="";
-      for(var i=0;i<M.length;i++){
-        str_as = M.charCodeAt(i);
-        str += String.fromCharCode(str_as + 1);
-      }
-      return str;
-    }
-  </script>
-
-
 </head>
 
 
@@ -61,14 +41,9 @@
       </div>
       <div id="social" class="col span_6">
         <ul>
-          <li>
-            <script type="text/javascript">
-              var ad = converter(String.fromCharCode(103,100,107,107,110,63,115,96,109,106)+String.fromCharCode(114,116,121,116,106,104,45,98,110,108));
-              document.write("<a href=\"mai"+"lto:"+ad+"\">Email<\/a>");
-            </script>
-          </li>
-          <li><a href="https://twitter.com/tanksuzuki" target="_blank">Twitter</a></li>
-          <li><a href="https://github.com/tanksuzuki" target="_blank">GitHub</a></li>
+          {{ with .Site.Params.twitter }}<li><a href="{{ . }}" target="_blank">Twitter</a></li>{{ end }}
+          {{ with .Site.Params.facebook }}<li><a href="{{ . }}" target="_blank">Facebook</a></li>{{ end }}
+          {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank">GitHub</a></li>{{ end }}
         </ul>
       </div>
     </div>

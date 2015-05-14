@@ -3,8 +3,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <footer role="contentinfo">
     <div style="text-align:center;">
-      <img src="/images/profile.png" width="64" height="64"><br>
-      Written by <a href="/about">{{ .Site.Params.author }}</a>
+      {{ with .Site.Params.profile }}<img src="{{ . }}" width="64" height="64"><br>{{ end }}
+      {{ with .Site.Params.author }}Written by {{ . }} {{ end }}
     </div>
   </footer>
 
