@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="{{.Site.LanguageCode}}">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="UTF-8">
+  <title>
+    {{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}
+  </title>
+  <meta name="author" content="{{ .Site.Params.author }}">
+
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+
+  <!-- Script
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script type="text/javascript">
+    function converter(M){
+      var str="", str_as="";
+      for(var i=0;i<M.length;i++){
+        str_as = M.charCodeAt(i);
+        str += String.fromCharCode(str_as + 1);
+      }
+      return str;
+    }
+  </script>
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  <!-- Header Section Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="/">{{ .Site.Title }}</a></h1>
+        {{ with .Site.Params.subtitle }}<h2>{{ . }}</h2>{{ end }}
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          <li>
+            <script type="text/javascript">
+              var ad = converter(String.fromCharCode(103,100,107,107,110,63,115,96,109,106)+String.fromCharCode(114,116,121,116,106,104,45,98,110,108));
+              document.write("<a href=\"mai"+"lto:"+ad+"\">Email<\/a>");
+            </script>
+          </li>
+          <li><a href="https://twitter.com/tanksuzuki" target="_blank">Twitter</a></li>
+          <li><a href="https://github.com/tanksuzuki" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
