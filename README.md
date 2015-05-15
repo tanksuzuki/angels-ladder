@@ -14,7 +14,7 @@ Angel's Ladder is a simple blog theme for Hugo.
 
 ## Screenshot
 
-Mobile view is [here](https://github.com/tanksuzuki/angels-ladder/tree/master/images/mobile.png).  
+All of the display [here](https://github.com/tanksuzuki/angels-ladder/tree/master/images/tn_full.png).
 
 ![](https://github.com/tanksuzuki/angels-ladder/tree/master/images/readme.png)  
 
