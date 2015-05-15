@@ -1,0 +1,12 @@
+name = "Angel's Ladder"
+license = "MIT"
+licenselink = "https://github.com/tanksuzuki/angels-ladder/blob/master/LICENSE.md"
+description = "Angel's Ladder is a simple blog theme for Hugo."
+homepage = "http://tanksuzuki.com/"
+tags = ["blog"]
+features = ["blog"]
+min_version = 0.13
+
+[author]
+    name = "tanksuzuki"
+    homepage = "http://tanksuzuki.com/"
