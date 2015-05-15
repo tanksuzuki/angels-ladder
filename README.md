@@ -84,7 +84,7 @@ For original styles, please edit the `layouts/static/custom.css`.
 
 ## License
 
-Open sourced under the [GPL license](https://github.com/tanksuzuki/angels-ladder/blob/master/LICENSE.md).
+Open sourced under the [MIT license](https://github.com/tanksuzuki/angels-ladder/blob/master/LICENSE.md).
 
 
 ## Author
