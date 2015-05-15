@@ -52,7 +52,7 @@ analytics = "UA-59744146-1"
 Details of each parameter are as follows.
 
 | Parameter | Required | Comment |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | baseurl | yes | Enter the title of your site. |
 | languageCode | yes | Enter the language code of HTML. Example: en, ja. |
 | title | yes | Enter the title of your site. |
