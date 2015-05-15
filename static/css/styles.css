@@ -222,7 +222,12 @@ article p code{
   border: 1px solid #ccc;
 }
 
-
+article blockquote{
+  margin: 25px 0;
+  padding-left: 20px;
+  border-left: 4px solid #ccc;
+  font-style: italic;
+}
 
 
 /* Common
