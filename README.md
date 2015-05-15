@@ -89,9 +89,9 @@ Open sourced under the [GPL license](https://github.com/tanksuzuki/angels-ladder
 
 ## Author
 
-Asuka Suzuki:stuck_out_tongue_winking_eye:
+Asuka Suzuki
 
 
 ## Contact
 
-Please contact me via [email](https://github.com/tanksuzuki) / [Twitter](https://twitter.com/tanksuzuki).  
+Please contact me via [email](https://github.com/tanksuzuki) / [Twitter](https://twitter.com/tanksuzuki) :stuck_out_tongue_winking_eye:
