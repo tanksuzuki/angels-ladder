@@ -1,3 +1,4 @@
+@color: #29abe2;
 
 /* Basic
 --------------------------------------------------*/
@@ -27,13 +28,13 @@ main#list a, main#list a:visited,
 nav a, nav a:visited{ color: #666; }
 
 article a, article a:visited,
-footer a, article a:visited{ color: #29abe2; }
+footer a, article a:visited{ color: @color; }
 
 header a:hover,
 article a:hover,
 main#index a:hover,
 main#list a:hover,
-nav a:hover{ color: #29abe2; }
+nav a:hover{ color: @color; }
 
 main#index .meta a,
 main#list .meta a,
@@ -41,7 +42,7 @@ main#single .meta a{ color: #999; }
 
 main#index .meta a:hover,
 main#list .meta a:hover,
-main#single .meta a:hover{ color: #29abe2; }
+main#single .meta a:hover{ color: @color; }
 
 article a:hover,
 footer a:hover{ text-decoration: underline; }
@@ -153,11 +154,11 @@ nav ul.pagination li{
 }
 
 nav ul.pagination li.active{
-  border: 2px solid #29abe2;
+  border: 2px solid @color;
 }
 
 nav ul.pagination li:hover{
-  border-color: #29abe2;
+  border-color: @color;
 }
 
 
@@ -233,7 +234,7 @@ article blockquote{
 /* Common
 --------------------------------------------------*/
 .article-header{
-  border-left: 4px solid #29abe2;
+  border-left: 4px solid @color;
   margin: 10px 0 25px -4px;
   padding: 5px 0 5px 10px;
 }
