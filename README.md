@@ -49,7 +49,7 @@ twitter = "https://twitter.com/foobar"
 github = "https://github.com/foobar"
 profile = "/images/profile.png"
 copyright = "Written by Asuka Suzuki"
-analytics = "UA-59744146-1"
+analytics = "UA-XXXXXXXX-X"
 ```
 
 Details of each parameter are as follows.
