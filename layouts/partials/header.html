@@ -50,7 +50,7 @@
   <header role="banner">
     <div class="row gutters">
       <div id="site-title" class="col span_6">
-        <h1><a href="/">{{ .Site.Title }}</a></h1>
+        <h1><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
         {{ with .Site.Params.subtitle }}<h2>{{ . }}</h2>{{ end }}
       </div>
       <div id="social" class="col span_6">
