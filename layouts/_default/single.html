@@ -28,5 +28,14 @@
     </article>
     {{ partial "disqus.html" . }}
   </main>
+  
+  <nav class="pagination">
+    {{ if .Next }}
+      <span class="previous">&larr; <a href="{{ .Next.Permalink }}" rel="prev">{{ .Next.Title }}</a></span>
+    {{ end }}
+    {{ if .Prev }}
+      <span class="next"><a href="{{ .Prev.Permalink }}" rel="next">{{ .Prev.Title }}</a> &rarr;</span>
+    {{ end }}
+  </nav>
 
 {{ partial "footer.html" . }}
