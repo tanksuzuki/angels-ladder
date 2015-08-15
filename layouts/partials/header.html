@@ -29,8 +29,8 @@
   
   <!-- RSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="{{ .Site.BaseUrl }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ .Site.BaseUrl }}index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.BaseURL }}index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 
   <!-- ShareThis Buttons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -51,7 +51,7 @@
   <header role="banner">
     <div class="row gutters">
       <div id="site-title" class="col span_6">
-        <h1><a href="{{ .Site.BaseUrl }}">{{ .Site.Title }}</a></h1>
+        <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
         {{ with .Site.Params.subtitle }}<h2>{{ . }}</h2>{{ end }}
       </div>
       <div id="social" class="col span_6">
@@ -59,7 +59,7 @@
           {{ with .Site.Params.twitter }}<li><a href="{{ . }}" target="_blank">Twitter</a></li>{{ end }}
           {{ with .Site.Params.facebook }}<li><a href="{{ . }}" target="_blank">Facebook</a></li>{{ end }}
           {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank">GitHub</a></li>{{ end }}
-          {{ if .Site.Params.showsRSS }}<li><a href="{{ .Site.BaseUrl }}index.xml" type="application/rss+xml" target="_blank">RSS</a></li>{{ end }}
+          {{ if .Site.Params.showsRSS }}<li><a href="{{ .Site.BaseURL }}index.xml" type="application/rss+xml" target="_blank">RSS</a></li>{{ end }}
         </ul>
       </div>
     </div>
