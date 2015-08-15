@@ -26,6 +26,11 @@
   <link rel="stylesheet" href="/css/highlight_monokai.css">
   <link rel="stylesheet" href="/css/theme.css">
   <link rel="stylesheet" href="/css/custom.css">
+  
+  <!-- RSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="{{ .Site.BaseUrl }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .Site.BaseUrl }}index.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 
   <!-- ShareThis Buttons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -54,6 +59,7 @@
           {{ with .Site.Params.twitter }}<li><a href="{{ . }}" target="_blank">Twitter</a></li>{{ end }}
           {{ with .Site.Params.facebook }}<li><a href="{{ . }}" target="_blank">Facebook</a></li>{{ end }}
           {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank">GitHub</a></li>{{ end }}
+          {{ if .Site.Params.showsRSS }}<li><a href="{{ .Site.BaseUrl }}index.xml" type="application/rss+xml" target="_blank">RSS</a></li>{{ end }}
         </ul>
       </div>
     </div>
