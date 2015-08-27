@@ -1,0 +1,30 @@
+/* Image Center Alignment */
+article img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ShareThis Buttons */
+#share-this {
+  margin: 40px 0 40px 0;
+}
+
+/* Pagination */
+nav.pagination {
+  padding: 20px 0 20px 0;
+  overflow: hidden;
+}
+nav.pagination span.previous {
+  float:left;
+  padding: 10px 0 10px 0;
+  max-width: 300px;
+}
+nav.pagination span.next {
+  float:right;
+  padding: 10px 0 10px 0;
+  max-width: 300px;
+}
+nav.pagination a {
+  color: #29abe2;
+}
