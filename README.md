@@ -71,16 +71,8 @@ Details of each parameter are as follows.
 
 ## Style Customization
 
-To change the theme color, edit the `layouts/static/theme.less`.
-
-The default theme color is as follows.
+The default theme color is `#29abe2`.
 Please change the favorite color.
-
-```
-/* Theme color
---------------------------------------------------*/
-@color: #29abe2;
-```
 
 For original styles, please edit the `layouts/static/custom.css`.
 
@@ -97,4 +89,4 @@ Asuka Suzuki
 
 ## Contact
 
-Please contact me via [email](https://github.com/tanksuzuki) / [Twitter](https://twitter.com/tanksuzuki) :stuck_out_tongue_winking_eye:
+Please contact me via [email](https://github.com/tanksuzuki) / [Twitter](https://twitter.com/tanksuzuki) :smile:
