@@ -144,21 +144,21 @@ nav ul.pagination li.active {
 nav ul.pagination li:hover {
   border-color: #29abe2;
 }
-nav.pagination {
+nav.pagination-single {
   padding: 20px 0 20px 0;
   overflow: hidden;
 }
-nav.pagination span.previous {
+nav.pagination-single span.previous {
   float: left;
   padding: 10px 0 10px 0;
   max-width: 300px;
 }
-nav.pagination span.next {
+nav.pagination-single span.next {
   float: right;
   padding: 10px 0 10px 0;
   max-width: 300px;
 }
-nav.pagination a {
+nav.pagination-single a {
   color: #29abe2;
 }
 #single aside {

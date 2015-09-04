@@ -167,26 +167,26 @@ nav ul.pagination li:hover{
 
 /* Pager (for Single Page)
 --------------------------------------------------*/
-.pagination-span(@float) {
+.pagination-single-span(@float) {
   float: @float;
   padding: 10px 0 10px 0;
   max-width: 300px;
 }
 
-nav.pagination {
+nav.pagination-single {
   padding: 20px 0 20px 0;
   overflow: hidden;
 }
 
-nav.pagination span.previous {
-  .pagination-span(left);
+nav.pagination-single span.previous {
+  .pagination-single-span(left);
 }
 
-nav.pagination span.next {
-  .pagination-span(right);
+nav.pagination-single span.next {
+  .pagination-single-span(right);
 }
 
-nav.pagination a {
+nav.pagination-single a {
   color: @color;
 }
 

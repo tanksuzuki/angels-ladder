@@ -31,7 +31,7 @@
     {{ partial "disqus.html" . }}
   </main>
   
-  <nav class="pagination">
+  <nav class="pagination-single">
     {{ if .Next }}
       <span class="previous">&larr; <a href="{{ .Next.Permalink }}" rel="prev">{{ .Next.Title }}</a></span>
     {{ end }}
