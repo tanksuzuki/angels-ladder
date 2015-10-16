@@ -1,0 +1,6 @@
+{{ $sm := .Get 0 }}
+{{ $url := printf "http://api.ce.nicovideo.jp/nicoapi/v1/video.info?v=%s&__format=json" $sm }}
+{{ $dataJ := getJSON $url }}
+{{ $title := $dataJ.nicovideo_video_response.video.title }}
+<script class="nicovideoplayer" type="text/javascript" src="http://ext.nicovideo.jp/thumb_watch/{{ $sm }}?w=500&amp;h=315"></script>
+<noscript><a href="http://www.nicovideo.jp/watch/{{ $sm }}">{{ $title }}</a></noscript>
