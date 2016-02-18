@@ -144,6 +144,23 @@ nav ul.pagination li.active {
 nav ul.pagination li:hover {
   border-color: #29abe2;
 }
+nav.pagination-single {
+  padding: 20px 0 20px 0;
+  overflow: hidden;
+}
+nav.pagination-single span.previous {
+  float: left;
+  padding: 10px 0 10px 0;
+  max-width: 300px;
+}
+nav.pagination-single span.next {
+  float: right;
+  padding: 10px 0 10px 0;
+  max-width: 300px;
+}
+nav.pagination-single a {
+  color: #29abe2;
+}
 #single aside {
   margin-top: 80px;
 }
@@ -195,6 +212,14 @@ article blockquote {
   padding-left: 20px;
   border-left: 4px solid #ccc;
   font-style: italic;
+}
+article img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+article #share-this {
+  margin: 40px 0 40px 0;
 }
 .article-header {
   border-left: 4px solid #29abe2;

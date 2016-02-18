@@ -139,7 +139,7 @@ header #social li:last-child{
 
 
 
-/* Pager
+/* Pager (for List Page)
 --------------------------------------------------*/
 nav ul.pagination{
   font-size: 0;
@@ -162,6 +162,32 @@ nav ul.pagination li.active{
 
 nav ul.pagination li:hover{
   border-color: @color;
+}
+
+
+/* Pager (for Single Page)
+--------------------------------------------------*/
+.pagination-single-span(@float) {
+  float: @float;
+  padding: 10px 0 10px 0;
+  max-width: 300px;
+}
+
+nav.pagination-single {
+  padding: 20px 0 20px 0;
+  overflow: hidden;
+}
+
+nav.pagination-single span.previous {
+  .pagination-single-span(left);
+}
+
+nav.pagination-single span.next {
+  .pagination-single-span(right);
+}
+
+nav.pagination-single a {
+  color: @color;
 }
 
 
@@ -237,6 +263,16 @@ article blockquote{
   padding-left: 20px;
   border-left: 4px solid #ccc;
   font-style: italic;
+}
+
+article img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+article #share-this {
+  margin: 40px 0 40px 0;
 }
 
 
