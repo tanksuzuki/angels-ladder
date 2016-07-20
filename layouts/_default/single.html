@@ -4,7 +4,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <main id="single" role="main">
     <div class="article-header">
-      <h1>{{ .Title }}</h1>
+      <h1><a href=".">{{ .Title }}</a></h1>
       <div class="meta">
         {{ .Date.Format "Jan 2, 2006" }} &nbsp;
         {{ range .Params.tags }}

@@ -21,11 +21,11 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="/css/sanitize.css">
-  <link rel="stylesheet" href="/css/responsive.css">
-  <link rel="stylesheet" href="/css/highlight_monokai.css">
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/sanitize.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/responsive.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlight_monokai.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/theme.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/custom.css">
   
   <!-- RSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -40,6 +40,32 @@
     <script type="text/javascript">stLight.options({publisher: '{{ . }}', doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
   {{ end }}
 
+  <!-- Facebook OpenGraph
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  {{if .Params.image }}
+     <meta property="og:image" content="{{ .Site.BaseURL }}images/{{.Params.image}}"/>
+  {{else}}
+      {{if .Site.Params.cover}}
+          <meta property="og:image" content="{{ .Site.BaseURL }}images/{{.Site.Params.cover}}"/>
+      {{end}}
+  {{end}}
+
+  <!-- Twitter Summary Card with Large Image
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="twitter:card" content="summary_large_image">
+  {{ with .Site.Params.twitter }}
+    <meta name="twitter:site" content="@{{ . }}">
+    <meta name="twitter:creator" content="@{{ . }}">
+  {{ end }}
+  <meta name="twitter:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ .Params.description }}">
+  {{if .Params.image }}
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{.Params.image}}">
+  {{else}}
+    {{if .Site.Params.cover}}
+        <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{.Site.Params.cover}}">
+    {{end}}
+  {{end}}
 
 </head>
 
@@ -58,10 +84,11 @@
       </div>
       <div id="social" class="col span_6">
         <ul>
-          {{ with .Site.Params.twitter }}<li><a href="{{ . }}" target="_blank">Twitter</a></li>{{ end }}
-          {{ with .Site.Params.facebook }}<li><a href="{{ . }}" target="_blank">Facebook</a></li>{{ end }}
-          {{ with .Site.Params.github }}<li><a href="{{ . }}" target="_blank">GitHub</a></li>{{ end }}
-          {{ if .Site.Params.showsRSS }}<li><a href="{{ .Site.BaseURL }}index.xml" type="application/rss+xml" target="_blank">RSS</a></li>{{ end }}
+          {{ with .Site.Params.home }}<li><a href="{{ . }}">Home</a></li>{{ end }}
+          {{ with .Site.Params.twitter }}<li><a href="https://twitter.com/{{ . }}">Twitter</a></li>{{ end }}
+          {{ with .Site.Params.facebook }}<li><a href="https://facebook.com/{{ . }}">Facebook</a></li>{{ end }}
+          {{ with .Site.Params.github }}<li><a href="https://github.com/{{ . }}">GitHub</a></li>{{ end }}
+          {{ if .Site.Params.showsRSS }}<li><a href="{{ .Site.BaseURL }}index.xml" type="application/rss+xml">RSS</a></li>{{ end }}
         </ul>
       </div>
     </div>
