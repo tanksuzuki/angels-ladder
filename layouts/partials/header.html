@@ -40,6 +40,41 @@
     <script type="text/javascript">stLight.options({publisher: '{{ . }}', doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
   {{ end }}
 
+  <!-- Twitter Summary Card with Large Image
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="twitter:card" content="summary_large_image">
+  {{ with .Site.Params.twitter }}
+    <meta name="twitter:site" content="@{{ . }}">
+    <meta name="twitter:creator" content="@{{ . }}">
+  {{ end }}
+  <meta name="twitter:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ .Params.description }}">
+  {{if .Params.image }}
+    <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{.Params.image}}">
+  {{else}}
+    {{if .Site.Params.cover}}
+        <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{.Site.Params.cover}}">
+    {{end}}
+  {{end}}
+
+  <!-- Twitter Summary Card with Large Image
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  {{ if .Site.Params.twitter }}
+    <meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
+    <meta name="twitter:creator" content="@{{ .Site.Params.twitter }}">
+    <meta name="twitter:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}">
+    <meta name="twitter:description" content="{{ .Params.description }}">
+    {{ if .Params.image }}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{ .Params.image }}">
+    {{ else if .Site.Params.thumbnail }}
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.thumbnail }}">
+    {{ else if .Site.Params.cover }}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.cover }}">
+    {{ end }}
+  {{ end }}
 
 </head>
 
