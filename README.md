@@ -38,6 +38,7 @@ The following is the example configuration.
 
 ```
 baseurl = "http://tanksuzuki.com/"
+canonifyurls = true
 languageCode = "ja"
 title = "TANKSUZUKI.COM"
 disqusShortname = "tanksuzuki"
@@ -59,6 +60,7 @@ Details of each parameter are as follows.
 | Parameter | Required | Comment |
 | :--- | :--- | :--- |
 | baseurl | yes | Enter the title of your site. |
+| canonifyurls | yes | Set to `true` since Angel's Ladder [canonicalizes URLs](https://gohugo.io/extras/urls/). |
 | languageCode | yes | Enter the language code of HTML. Example: en, ja. |
 | title | yes | Enter the title of your site. |
 | disqusShortname | no | Enter the short name of the disqus. If you do not enter, disqus section is hidden. |
