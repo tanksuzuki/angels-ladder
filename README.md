@@ -90,6 +90,13 @@ Please change the favorite color.
 
 For original styles, please edit the `layouts/static/custom.css`.
 
+## Development Mode
+
+ Development mode is supported. In this mode, Google Analytics tags are not rendered.
+
+```
+env HUGO_ENV="DEV" hugo server -t angels-ladder -D -w
+```
 
 ## License
 
