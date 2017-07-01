@@ -6,7 +6,6 @@
     <div class="article-header">
       <h1>{{ .Title }}</h1>
       <div class="meta">
-        {{ .Date.Format "Jan 2, 2006" }} &nbsp;
         {{ range .Params.tags }}
           #<a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;
         {{ end }}
@@ -31,13 +30,4 @@
     {{ partial "disqus.html" . }}
   </main>
   
-  <nav class="pagination-single">
-    {{ if .Next }}
-      <span class="previous">&larr; <a href="{{ .Next.Permalink }}" rel="prev">{{ .Next.Title }}</a></span>
-    {{ end }}
-    {{ if .Prev }}
-      <span class="next"><a href="{{ .Prev.Permalink }}" rel="next">{{ .Prev.Title }}</a> &rarr;</span>
-    {{ end }}
-  </nav>
-
 {{ partial "footer.html" . }}
