@@ -3,13 +3,13 @@
   <!-- Main Section Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <main id="list" role="main">
-    <div class="article-header light-gray"><h1>#{{ .Title }}</h1></div>
+    <div class="article-header"><h1>{{ .Title }}</h1></div>
     {{ range .Data.Pages }}
     <div class="summary">
       <h2><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></h2>
       <div class="meta">
         {{ .Date.Format "Jan 2, 2006" }} &nbsp;
-        {{ range .Params.tags }}
+        {{ range .Params.tags }} &nbsp;
           #<a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;
         {{ end }}
       </div>

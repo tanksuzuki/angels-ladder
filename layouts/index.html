@@ -1,22 +1,20 @@
 {{ partial "header.html" . }}
-
-
+<section class="main">
+    <div class="container">
+        <div class="content">
+            {{ range where .Data.Pages "Title" "Home" }}
+                <div class="markdown">
+				<article>
+                {{ .Content }}
+                </div>
+				</article>
+            {{ end }}
+        </div>
+    </div>
+</section>
 <!-- Main Section Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <main id="index" role="main">
-  <div class="article-header light-gray"><h1>Recent Articles</h1></div>
-  {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-  {{ range $paginator.Pages }}
-  <div class="summary">
-    <h2><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></h2>
-    <div class="meta">
-      {{ .Date.Format "Jan 2, 2006" }} &nbsp;
-      {{ range .Params.tags }}
-        #<a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;
-      {{ end }}
-    </div>
-  </div>
-  {{ end }}
 </main>
 
 
